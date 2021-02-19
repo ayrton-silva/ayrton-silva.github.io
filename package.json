@@ -2,7 +2,7 @@
   "name": "vnda-front-end-challenge-junior",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://ayrton-silva.github.io/vnda-front-end-challenge-junior",
+  "homepage": "https://ayrton-silva.github.io",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,9 +14,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ayrton-silva/vnda-front-end-challenge-junior/issues"
-  },
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-sass": "^4.1.0",
