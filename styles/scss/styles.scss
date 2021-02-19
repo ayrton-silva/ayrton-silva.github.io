@@ -22,11 +22,12 @@ input {
 html,
 body {
   font-family: 'PT Sans', sans-serif;
+  overflow-x: hidden;
 }
 
 nav {
   z-index: 2;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: $primary;
@@ -213,7 +214,7 @@ main {
 .product-section {
   padding: 40px 100px;
   width: 85vw;
-  height: 65vh;
+  height: 75vh;
   background: $primary;
   display: flex;
 
@@ -222,6 +223,7 @@ main {
 
     .product-image-container {
       margin-right: 70px;
+      align-self: center;
 
       img {
         box-shadow: 0 0 0.2em $black;
@@ -231,11 +233,12 @@ main {
   }
 
   .product-summary {
-    margin-right: 180px;
-    height: 73vh;
+    margin-right: 15vw;
+    height: 100%;
     width: 20vw;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
     p {
       color: $lighter-black;
@@ -479,6 +482,40 @@ footer {
   }
 }
 
+@media screen and (max-width: 330px) {
+  .categories-container {
+    height: 50vh;
+    gap: 5px;
+
+    .category {
+      width: 75px;
+      height: 75px;
+    }
+  }
+
+  .product-carousel {
+    max-width: 300px;
+    margin-top: 90px;
+  }
+
+  .instagram-image-container {
+    max-width: 300px;
+
+    .summary-container {
+      padding: 10px;
+    }
+  }
+
+  .card,
+  .instagram-images-container {
+    max-width: 300px;
+
+    img {
+      max-width: 300px;
+    }
+  }
+}
+
 @media screen and (max-width: 600px) {
   nav {
     overflow-x: hidden;
@@ -661,5 +698,63 @@ footer {
         text-align: center;
       }
     }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1300px) {
+  nav {
+    .logo {
+      h1 {
+        font-size: 1rem;
+      }
+    }
+
+    .nav-main li {
+      margin: 0;
+      padding: 5px;
+    }
+  }
+
+  .banner {
+    height: 20vh;
+  }
+
+  .categories-container {
+    height: 15vh;
+    justify-items: center;
+    gap: 0;
+
+    .category {
+      width: 75px;
+      height: 75px;
+
+      img {
+        width: 75px;
+        height: 75px;
+      }
+    }
+  }
+
+  .instagram-images-container {
+    flex-direction: column;
+
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
+  main .main-wrapper .summary-container {
+    p,
+    h1 {
+      width: 100%;
+    }
+  }
+
+  .product-section .product-container .product-summary {
+    margin-right: 100px;
+  }
+
+  .instagram-image-container.center-image {
+    margin: 0px 25px;
   }
 }
